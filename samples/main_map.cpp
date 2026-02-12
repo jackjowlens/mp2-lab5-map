@@ -1,10 +1,11 @@
+#include <iostream>
+
 #include "../include/map.h"
 #include "string.h"
-#include <iostream>
 
 using namespace std;
 
-int main(){
+int main() {
     TableArrSort<string, int> table;
     table["test"] = 1;
     table.Print();
@@ -14,7 +15,7 @@ int main(){
     table.Insert("new_test", 3);
     table.Print();
     cout << *table.Find("new_test") << "\n";
-    for (auto x:  table.keys()){
+    for (auto x : table.keys()) {
         cout << x;
     }
 

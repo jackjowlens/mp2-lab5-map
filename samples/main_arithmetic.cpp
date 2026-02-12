@@ -11,12 +11,11 @@ void p(const std::string& a) { std::cout << a << endl; }
 
 int main() {
     Stake<int> stake;
-    for(int i = 0; i < 10; i++)
-      stake.push(i);
-    for(int i = 0; i < 10; i++){
-      cout << stake.is_empty() << endl;
-      cout << stake.pop() << "\n";
-      cout << "len " << stake.length() << endl;
+    for (int i = 0; i < 10; i++) stake.push(i);
+    for (int i = 0; i < 10; i++) {
+        cout << stake.is_empty() << endl;
+        cout << stake.pop() << "\n";
+        cout << "len " << stake.length() << endl;
     }
     cout << stake.is_empty();
 

@@ -32,7 +32,7 @@ class TableArrSort : public Map<T, H> {
 
    public:
     H* Find(T key) {
-        for (int i = 0; i < data.size(); i++) {
+        for (size_t i = 0; i < data.size(); i++) {
             if (data[i].key == key) {
                 return &data[i].value;
             }
@@ -41,7 +41,7 @@ class TableArrSort : public Map<T, H> {
     }
 
     H& operator[](T key) {
-        for (int i = 0; i < data.size(); i++) {
+        for (size_t i = 0; i < data.size(); i++) {
             if (data[i].key == key) {
                 return data[i].value;
             }
@@ -55,7 +55,7 @@ class TableArrSort : public Map<T, H> {
             return;
         }
         cout << "{\n";
-        for (int i = 0; i < data.size(); i++) {
+        for (size_t i = 0; i < data.size(); i++) {
             cout << "\t" << '"' << data[i].key << '"' << " : " << data[i].value << "";
             if (i != data.size() - 1) {
                 cout << ",";
@@ -74,7 +74,7 @@ class TableArrSort : public Map<T, H> {
 
     void Delete(T key) {
         int count = 0;
-        for (int i = 0; i < data.size(); i++) {
+        for (size_t i = 0; i < data.size(); i++) {
             if (data[i].key == key) {
                 data.erase(data.begin() + count);
                 return;
